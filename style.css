@@ -1,0 +1,54 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#070b14;--panel:#0b1220;--line:#18263a;--text:#e8eef7;--muted:#8da0b9;--blue:#55aaff;--green:#46e58a}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.7;overflow-x:hidden}
+.grid-bg{position:fixed;inset:0;z-index:-2;background:
+linear-gradient(rgba(79,132,183,.08) 1px,transparent 1px),
+linear-gradient(90deg,rgba(79,132,183,.08) 1px,transparent 1px);
+background-size:48px 48px;
+mask-image:linear-gradient(to bottom,black,transparent 90%)}
+.grid-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(42,135,255,.13),transparent 30%),radial-gradient(circle at 20% 60%,rgba(0,190,255,.07),transparent 25%)}
+.header{height:82px;border-bottom:1px solid var(--line);background:rgba(7,11,20,.82);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 7%;position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:13px;color:var(--text);text-decoration:none}
+.brand-mark{width:46px;height:46px;border:2px solid var(--blue);border-radius:14px;display:grid;place-items:center;color:var(--blue);font-weight:800;box-shadow:0 0 22px rgba(85,170,255,.22)}
+.brand strong{display:block;font-family:"JetBrains Mono",monospace;letter-spacing:2px}
+.brand span{display:block;color:#55dc8b;font:500 12px "JetBrains Mono",monospace;letter-spacing:1px}
+.brand i,.dot{display:inline-block;width:9px;height:9px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green);margin-right:7px}
+nav{display:flex;gap:24px}
+nav a{color:var(--muted);text-decoration:none;font:500 13px "JetBrains Mono",monospace}
+nav a:hover{color:var(--blue)}
+.menu-btn{display:none;background:none;border:1px solid var(--blue);border-radius:7px;padding:10px;cursor:pointer}
+.menu-btn span{display:block;width:25px;height:2px;background:#dceaff;margin:5px}
+main{width:min(1120px,90%);margin:auto}
+.hero{min-height:calc(100vh - 82px);display:flex;flex-direction:column;justify-content:center;padding:70px 0}
+.status{font:600 15px "JetBrains Mono",monospace;color:#50dc8c;text-align:right;margin-bottom:45px}
+.status b{color:#7deaa8}
+.hero-content{display:grid;grid-template-columns:280px 1fr;gap:70px;align-items:center}
+.photo-wrap{width:270px;height:270px;border-radius:50%;padding:7px;border:3px solid var(--blue);box-shadow:0 0 35px rgba(65,163,255,.2),inset 0 0 30px rgba(65,163,255,.08)}
+.photo-placeholder{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#18283b,#090e18);color:#6faee5;font:700 24px "JetBrains Mono",monospace;letter-spacing:3px}
+.eyebrow{color:#5caef1;font:500 13px "JetBrains Mono",monospace;margin-bottom:12px}
+h1{font-size:clamp(48px,8vw,88px);line-height:1.02;letter-spacing:-4px;margin-bottom:14px}
+.hero h2{font:500 22px "JetBrains Mono",monospace;color:#69b2f4;max-width:720px}
+.intro{color:var(--muted);max-width:700px;margin:22px 0;font-size:16px}
+.buttons{display:flex;gap:14px;margin-top:26px}.btn{display:inline-block;text-decoration:none;color:#cde5ff;border:1px solid #315273;padding:11px 20px;border-radius:7px;font-weight:700;font-size:14px}.btn.primary{background:#173b60;border-color:#5baeff;box-shadow:0 0 20px rgba(74,159,255,.12)}
+.section{padding:85px 0}.section-title{font:700 22px "JetBrains Mono",monospace;margin-bottom:28px}.section-title span{color:var(--blue);font-size:14px;margin-right:10px}
+.card,.contact-card{border:1px solid var(--line);background:rgba(11,18,32,.72);padding:30px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.18)}
+.card p{color:#aab9cc;margin:10px 0}.card strong{color:#d9ebff}
+.skills-grid,.cert-grid,.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skill-card,.cert-card,.project{border:1px solid var(--line);background:rgba(11,18,32,.68);padding:23px;border-radius:10px;transition:.25s}
+.skill-card:hover,.cert-card:hover,.project:hover{transform:translateY(-4px);border-color:#315f88;box-shadow:0 12px 30px rgba(35,125,205,.08)}
+.skill-card b{display:block;color:#70b9ff;font:700 14px "JetBrains Mono",monospace;margin-bottom:8px}.skill-card span{color:#95a6bc;font-size:14px}
+.cert-card{display:flex;gap:15px;align-items:center}.cert-icon{width:50px;height:50px;border:1px solid #37658c;border-radius:9px;display:grid;place-items:center;color:#70b9ff;font-weight:800}.cert-card h3{font-size:16px}.cert-card p{color:var(--muted);font-size:12px}
+.project-number{font:700 12px "JetBrains Mono",monospace;color:#4f9fe4;margin-bottom:14px}.project h3{font-size:20px;margin-bottom:10px}.project p{color:#93a4b9;font-size:14px;min-height:72px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tags span{border:1px solid #263e57;padding:3px 8px;border-radius:5px;color:#71b6ed;font:500 11px "JetBrains Mono",monospace}
+.contact-card{text-align:center;padding:55px 20px}.contact-card h2{font-size:38px}.contact-card p{color:var(--muted);margin:8px 0 22px}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.contact-links a{color:#b9dcff;border:1px solid #294661;padding:9px 16px;border-radius:6px;text-decoration:none;font:500 13px "JetBrains Mono",monospace}
+footer{text-align:center;border-top:1px solid var(--line);padding:28px;color:#52647b;font:500 11px "JetBrains Mono",monospace}
+@media(max-width:800px){.header{padding:0 5%}.menu-btn{display:block}nav{display:none;position:absolute;top:82px;left:0;right:0;background:#080e19;border-bottom:1px solid var(--line);padding:18px 7%;flex-direction:column}nav.open{display:flex}.hero{padding:55px 0}.status{text-align:left;font-size:12px}.hero-content{grid-template-columns:1fr;gap:30px}.photo-wrap{width:190px;height:190px;margin:auto}h1{font-size:54px;letter-spacing:-2px}.hero h2{font-size:16px}.skills-grid,.cert-grid,.projects-grid{grid-template-columns:1fr}.section{padding:60px 0}}
+
+.profile-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:50%;
+  display:block;
+}
